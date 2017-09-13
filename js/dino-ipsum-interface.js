@@ -24,10 +24,11 @@ $(document).ready(function() {
     promise.then(function(response) {
       let body = JSON.parse(response);
       for (var i = 0; i < body.length; i++) {
-          $(".output").append(`<br><span class = 'paragraphLabel'>Paragraph ${i+1}: </span> `);
-        for (var j = 0; j < body[i].length; j++) {
-          $(".output").append(`<span>${body[i][j]} </span>`);
-        }
+          $(".output").append(`<br><span class = 'paragraphLabel'>Paragraph ${i+1}: </span>           ${body[i].join(',')}`);
+
+        // for (var j = 0; j < body[i].length; j++) {
+        //   $(".output").append(`<span>${body[i][j]} </span>`);
+        // }
 
 
       }
